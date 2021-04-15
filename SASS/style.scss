@@ -100,3 +100,53 @@ h5{
     color: red;
 
 }
+
+
+
+
+//------------------DEMO IF ELES 
+
+.demo_if_else{
+    $colorIfElse : pink;
+   
+        @if $colorIfElse == pink {
+            $colorIfElse: yellow;
+        }
+        h5{
+    
+            background-color:  green;
+            color: $colorIfElse;
+        }
+        
+}
+
+//-----------DEMO FOR 
+
+.demo_for{
+    @for $size from 1 through 3 {      //through  i=1; i<=3  ;   to i=1; i<3
+        .line_#{$size}{
+            font-size: 2em * $size;
+        }
+    }
+
+}
+
+
+//DEMO WHILE 
+//dùng cho trường hợp muốn tắng giảm cột đồ tăng dần giảm dần kích thước
+$col : 4;
+    @while $col > 0 {
+        // .cols-#{$col}{
+        //     width: 100% / $col;
+        // }
+        .demo_while{
+            p{
+                color: red;
+            }
+        }
+        $col : $col - 1;   // giảm dần 
+    }
+
+
+
+
