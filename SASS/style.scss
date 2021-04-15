@@ -1,0 +1,102 @@
+
+//Cách đặt một biến : bắt đầu bằng dấu dolas
+//Cách đặt tên, đầu tiên phải nêu nó là dùng cho thẻ nào khu vực nào, theo từ thẻ ngoài vào thẻ trong
+$section-heading-color: blue;
+$section-heading-fontSize: 40px;
+$section-heading-letter-Spacing: 10px;
+
+h1{color: $section-heading-color;
+    font-size:  $section-heading-fontSize;
+    letter-spacing: $section-heading-letter-Spacing;
+}
+
+//Gọi gộp ra luôn, tất cả các thẻ con trong class nào.
+
+.header{
+    h2{
+        
+        color: red;
+        &:hover{
+            color: hotpink;
+            font-size: 60px;
+        }
+        font-size:  30px;
+        font-weight: normal;
+        //Gom nhóm thuộc tính ÍT KHI SỬ DỤNG
+        //Gom lại như này cho cái font mà k cần tách ra như trên
+        font: {
+            font-size: 30px;
+            font-weight: normal;
+        }
+    }
+
+    //DDấu & đại diện cho thẻ bên ngoài nó, viết như trên k cần tách ra viết như dưới
+    // h2:hover{
+    //     color: hotpink;
+    //      font-size: 60px;
+    // }
+    span{
+        color: yellow;
+        letter-spacing: 10px;
+    }
+
+    p{
+        color: green;
+        margin-top: 40px;
+    }
+    
+    
+}
+// DEMO MIXIN -------------------------
+
+// .header_1{
+//     h3{
+//      color: red;
+//     font-size: 40px;
+//     letter-spacing: 20px;
+
+//     }
+// }
+// .footer{
+//     h3{
+//         color: red;
+//     font-size: 40px;
+//     letter-spacing: 20px;
+    
+//     }
+// }
+
+// Như trên thì 2 cái có thuộc tính đều giống nhau nên a tạo 1 mixin kiểu 1 hàm ( có tham số);
+
+@mixin heading-style($color, $fontSize, $letter-spacing){
+        color: $color;
+        font-size: $fontSize;
+        letter-spacing: 20px;
+        //Đặt biến ở trong mixin luôn cũng đc
+        $translate:translate(100px,200px);
+        transform: $translate;
+}
+
+.header_1{
+    h3{
+        @include heading-style(hotpink,30px,10px);
+    }
+}
+.footer{
+    h3{
+        @include heading-style(red,20px,30px);
+    }
+}
+
+h5{
+    color: hotpink;
+    background-color: indigo;
+}
+
+.demo_extend h6{
+    @extend h5;
+    //cái nào thêm đc cứ thêm, muốn thay đổi thì ghi đè, tại nó dịch từ trên xuống dưới nên lấ theo cái cuối
+    font-size: 20px;
+    color: red;
+
+}

@@ -1,0 +1,42 @@
+h1 {
+  color: blue;
+  font-size: 40px;
+  letter-spacing: 10px; }
+
+.header h2 {
+  color: red;
+  font-size: 30px;
+  font-weight: normal;
+  font-font-size: 30px;
+  font-font-weight: normal; }
+  .header h2:hover {
+    color: hotpink;
+    font-size: 60px; }
+.header span {
+  color: yellow;
+  letter-spacing: 10px; }
+.header p {
+  color: green;
+  margin-top: 40px; }
+
+.header_1 h3 {
+  color: hotpink;
+  font-size: 30px;
+  letter-spacing: 20px;
+  transform: translate(100px, 200px); }
+
+.footer h3 {
+  color: red;
+  font-size: 20px;
+  letter-spacing: 20px;
+  transform: translate(100px, 200px); }
+
+h5, .demo_extend h6 {
+  color: hotpink;
+  background-color: indigo; }
+
+.demo_extend h6 {
+  font-size: 20px;
+  color: red; }
+
+/*# sourceMappingURL=style.css.map */
