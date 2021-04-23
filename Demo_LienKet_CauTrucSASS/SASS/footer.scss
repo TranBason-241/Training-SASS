@@ -1,0 +1,54 @@
+
+$xs:576px;
+$sm:768px;
+$md:992px;
+$lg:1200px;
+@mixin  MediaQuery($type) {
+    @if $type == $xs{
+        @media  screen and (max-width:$xs) {
+            @content;
+        }
+    }
+    @else if $type == $sm{
+        @media  screen and (max-width:$sm) {
+            @content;
+        }
+    }
+    @else if $type == $md{
+        @media  screen and (max-width:$md) {
+            @content;
+        }
+    }
+    @else if $type == $lg{
+        @media  screen and (max-width:$lg) {
+            @content;
+        }
+    }
+}
+
+footer{
+
+    //Trong trường hợp trong footer có nhiều cái phải thay đổi như h1 h2 ... thì mình k dùng như
+    //bên header được, chẳng lẽ gọi media screen and miết trông ngu lắm nên ta dùng mixin
+    h1{
+        color:  green;
+        font-size: 20px;
+        @include MediaQuery($sm){
+            color: hotpink;
+            font-size: 60px;
+        }
+        @include MediaQuery($xs){
+            color: grey;
+            font-size: 40px;
+        }
+    }
+    h2{
+        color: blue;
+        font-size: 50px;
+        @include MediaQuery($lg){
+            color: indigo;
+            font-size: 20px;
+        }
+    }
+
+}

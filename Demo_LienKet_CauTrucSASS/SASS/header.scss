@@ -1,0 +1,20 @@
+header{
+    h1{
+        color: red;
+        font-size: 60px;
+
+        //Media query dùng để responsive
+
+        @media screen and (max-width:750px){
+
+            color: coral;
+            font-size: 20px;
+        }
+        @media  screen and (max-width:576px) {
+            color: blue;
+            font-size: 50px;
+        }
+        
+
+    }
+}

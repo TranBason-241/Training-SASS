@@ -1,0 +1,32 @@
+header h1 {
+  color: red;
+  font-size: 60px; }
+  @media screen and (max-width: 750px) {
+    header h1 {
+      color: coral;
+      font-size: 20px; } }
+  @media screen and (max-width: 576px) {
+    header h1 {
+      color: blue;
+      font-size: 50px; } }
+
+footer h1 {
+  color: green;
+  font-size: 20px; }
+  @media screen and (max-width: 768px) {
+    footer h1 {
+      color: hotpink;
+      font-size: 60px; } }
+  @media screen and (max-width: 576px) {
+    footer h1 {
+      color: grey;
+      font-size: 40px; } }
+footer h2 {
+  color: blue;
+  font-size: 50px; }
+  @media screen and (max-width: 1200px) {
+    footer h2 {
+      color: indigo;
+      font-size: 20px; } }
+
+/*# sourceMappingURL=style.css.map */
